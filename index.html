@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 		<link rel="stylesheet" href="./assets/styles/main.css" >
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -13,14 +13,16 @@
 	<body>
 		<header>
 			<nav>
-				<a href="https://facebook.com" ><i class="fa fa-facebook"></i></a>
-				<a href="https://twitter.com" ><i class="fa fa-twitter"></i></a>
+				<a href="https://facebook.com" ><i class="fab fa-facebook"></i></a>
+				<a href="https://twitter.com" ><i class="fab fa-twitter"></i></a>
 			</nav>
 			<section class="welcome">Experiencing the ocean through time</section>
 		</header>
 		<main class="wrapper">
 			<section class="landing"></section>
-			<!-- <div id="path"> </div> -->
+			<div class="trails"> 
+				<img src="assets/img/svg/desktop_path.svg" class="trails__desktop">
+			</div>
 			<section class="chapter chapter--left">
 				<p class="chapter__text chapter__text--left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
 			</section>
@@ -126,7 +128,37 @@
 				</div>
 			</section>
 		</main>
-		<footer>
+		<footer class="footer">
+			<section class="footer__transition"></section>
+			<section class="footer__content">
+				<h1 class="footer__heading">BRLSI and Bath Spa University In Partnership To Create Immersive Experiences</h1>
+				<div class="footer__container">
+					<div class="footer__left">
+						<div class="footer__org">
+							<img src="assets/img/svg/BRLSI-Logo.svg" alt="" class="footer__logo">
+							<div class="socials">
+								<a href="https://google.co.uk/" class="socials__link" target="_blank"><i class="fas fa-envelope"></i></a>
+								<a href="https://google.co.uk/" class="socials__link" target="_blank"><i class="fab fa-instagram"></i></a>
+								<a href="https://google.co.uk/" class="socials__link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://google.co.uk/" class="socials__link" target="_blank"><i class="fab fa-twitter"></i></a>
+							</div>
+						</div>
+						<div class="footer__org">
+							<img src="assets/img/svg//Bath-Spa-University-Logo.svg" alt="" class="footer__logo">
+							<div class="socials">
+								<a href="https://google.co.uk/" class="socials__link" target="_blank"><i class="fas fa-envelope"></i></a>
+								<a href="https://google.co.uk/" class="socials__link" target="_blank"><i class="fab fa-instagram"></i></a>
+								<a href="https://google.co.uk/" class="socials__link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://google.co.uk/" class="socials__link" target="_blank"><i class="fab fa-twitter"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__right">
+						<p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+					</div>
+				</div>
+			</section>
+			<section class="footer__map"></section>
 		</footer>
 	</body>
 </html>

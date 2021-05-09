@@ -38,7 +38,60 @@ nav a {
 
 // Landing
 .landing {
-    background: linear-gradient(180deg, #41A5C5 0%, rgba(193, 234, 248, 0.5) 100%);
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #41A5C5 0%, #c1eaf8 100%);
+    }
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 5;
+        bottom: -70px;
+        left: 0px;
+        width: 100%;
+        height: 400px;
+        background-image: url('../img/svg/waves-front.svg');
+        background-size: contain;
+        background-position: top;
+        background-repeat: repeat;
+    }
+}
+
+// Socials
+.socials {
+    padding: 0.8em 0px;
+
+    &__link {
+        color: #E9E9E9;
+        margin-right: 15px;
+        padding: 10px;
+        border: 2px solid #E9E9E9;
+        border-radius: 100%;
+        transition: 200ms ease;
+
+        &:last-of-type {
+            margin-right: 0px;
+        }
+
+        & i {
+            height: 16px;
+            width: 16px;
+            text-align: center;
+        }
+
+        &:hover {
+            background-color: #E9E9E9;
+            color: #14232C;
+        }
+    }
 }
 
 // Button
@@ -107,6 +160,19 @@ nav a {
     transition: 200ms ease-in-out;
     fill: #D9D9D9;
     stroke: #D9D9D9;
+}
+
+// Paths
+.trails {
+    position: relative;
+
+    &__desktop {
+        position: absolute;
+        z-index: 1;
+        top: 250px;
+        left: 0px;
+        height: 14000px;
+    }
 }
 
 // Chapter
@@ -201,3 +267,86 @@ nav a {
 }
 
 // Footer
+.footer {
+    background-color: #14232C;
+
+    &__transition {
+        position: relative;
+        margin-top: 160px;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: -160px;
+            left: 0px;
+            height: 160px;
+            width: 100%;
+            background-image: url("../img/svg/oceanfloor.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    &__heading {
+        font-size: 40px;
+        font-weight: 800;
+        color: #E9E9E9;
+        line-height: 1.4em;
+        max-width: 60%;
+        margin-bottom: 100px;
+        align-self: flex-start;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 50%;
+    }
+
+    &__right {
+        width: 50%;
+    }
+
+    &__org {
+        &:first-of-type {
+            margin-right: 40px;
+        }
+    }
+
+    &__logo {
+        padding: 20px;
+        background-color: #121F27;
+        width: 250px;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-size: 22px;
+        font-weight: 500;
+        color: #E9E9E9;
+        line-height: 1.8em;
+        text-align: justify;
+        width: 90%;
+    }
+
+    &__map {
+        background-color: #172630;
+    }
+}
