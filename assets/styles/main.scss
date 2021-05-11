@@ -10,6 +10,7 @@ body {
 
 section {
     height: 100vh;
+    padding: 0px 100px;
 }
 
 // Header
@@ -32,7 +33,7 @@ nav a {
 
 // Wrapper
 .wrapper {
-    max-width: 1440px;
+    // max-width: 1440px;
     margin: auto;
 }
 
@@ -60,7 +61,7 @@ nav a {
         height: 400px;
         background-image: url('../img/svg/waves-front.svg');
         background-size: cover;
-        background-position: top center;
+        background-position: top left;
         background-repeat: no-repeat;
     }
 }
@@ -162,57 +163,69 @@ nav a {
     stroke: #D9D9D9;
 }
 
+// Trails
+.trails {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 16000px;
+
+    &__desktop {
+        position: absolute;
+        top: calc(100vh + 350px);
+        left: 150px;
+    }
+}
+
 // Backdrop
 .backdrop {
 
     &__asset {
         position: absolute;
+        width: 25vw;
+        min-width: 100px;
 
         &--001 {
-            top: 150vh;
+            top: -350px;
             left: 0px;
         }
-    
+
         &--002 {
-            top: 190vh;
+            top: -550px;
             right: 0px;
         }
 
         &--003 {
-            top: 280vh;
+            top: -200px;
             right: 0px;
         }
 
         &--004 {
-            top: 320vh;
+            top: 800px;
             left: 0px;
             width: 100%;
-        }
-
-        &--005 {
-            top: 455vh;
-            left: 0px;
-            width: 100%;
-        }
-
-        &--006 {
-            top: 580vh;
-            left: 0px;
         }
     }
 }
 
 // Chapter
 .chapter {
-    display: flex;
-    align-items: center;
+    position: relative;
 
-    &--left {
-        justify-content: flex-start;
-    }
+    &__container {
+        display: flex;
+        align-items: center;
+        max-width: 1440px;
+        margin: auto;
+        height: 100%;
 
-    &--right {
-        justify-content: flex-end;
+        &--left {
+            justify-content: flex-start;
+        }
+    
+        &--right {
+            justify-content: flex-end;
+        }
     }
 
     &__text {
@@ -235,9 +248,15 @@ nav a {
 // Object
 .object {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1440px;
+        margin: auto;
+        height: 100%;
+    }
 
     &__sketchfab {
         width: 40%;
@@ -290,6 +309,22 @@ nav a {
 
         &:last-of-type {
             margin-right: 0px;
+        }
+    }
+}
+
+.object-full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__sketchfab {
+        width: 90vw;
+        height: 90vh;
+
+        & iframe {
+            width: 100%;
+            height: 100%;
         }
     }
 }

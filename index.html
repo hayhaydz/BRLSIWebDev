@@ -18,121 +18,139 @@
 			</nav>
 			<section class="welcome">Experiencing the ocean through time</section>
 		</header>
-		<div class="trails"> 
-			<!-- <img src="assets/img/svg/trail-desktop.svg" class="trails__desktop"> -->
-		</div>
-		<div class="backdrop">
-			<img src="assets/img/svg/Background-Asset-001.svg" class="backdrop__asset backdrop__asset--001" alt="">
-			<img src="assets/img/svg/Background-Asset-002.svg" class="backdrop__asset backdrop__asset--002" alt="">
-			<img src="assets/img/svg/Background-Asset-003.svg" class="backdrop__asset backdrop__asset--003" alt="">
-			<img src="assets/img/svg/Background-Asset-004.svg" class="backdrop__asset backdrop__asset--004" alt="">
-			<img src="assets/img/svg/Background-Asset-005.svg" class="backdrop__asset backdrop__asset--005" alt="">
-			<img src="assets/img/svg/Background-Asset-006.svg" class="backdrop__asset backdrop__asset--006" alt="">
+		<div class="trails" id="trail_container"> 
+			<svg width="1438" height="10369" viewBox="0 0 1438 10369" fill="none" xmlns="http://www.w3.org/2000/svg" class="trails__desktop" id="story_trail">
+				<path d="M-22.5 2.5C408.5 2.5 1686.74 28.4998 1147.47 629C874.471 933 777.479 1011 383.971 1452C-51.0294 1939.5 -153.064 3301.84 839.47 4203C1909.47 5174.5 434.47 4713.5 244.47 5695.5C54.4704 6677.5 237.469 8145 1018.97 8926.5C1800.47 9708 1393 10366.5 533.5 10366.5" stroke="#546A76" stroke-width="5" stroke-miterlimit="16" stroke-dasharray="30 10"/>
+			</svg>	
 		</div>
 		<main class="wrapper">
 			<section class="landing"></section>
-			<section class="chapter chapter--left">
-				<p class="chapter__text chapter__text--left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+			<section class="chapter">
+				<div class="chapter__container chapter__container--left">
+					<p class="chapter__text chapter__text--left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+				</div>
 			</section>
 			<section class="object">
-				<div class="sketchfab-embed-wrapper object__sketchfab">
-					<iframe title="Medium Poly" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8f38a11b901942b3b8493a9687885776/embed?camera=0&transparent=1&ui_hint=0"></iframe>
-				</div>
-				<div class="object__right">
-					<h1 class="object__heading">The Legends of Coco De Mer</h1>
-					<p class="object__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
-					<div class="object__details">
-						<span class="object__label">SIZE</span>
-						<p class="object__detail">232cm</p>
-						<span class="object__label">WEIGHT</span>
-						<p class="object__detail">22kg</p>
-						<span class="object__label">ORIGIN</span>
-						<p class="object__detail">Seychelles Islands</p>
+				<div class="object__container">
+					<div class="sketchfab-embed-wrapper object__sketchfab">
+						<iframe title="Medium Poly" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8f38a11b901942b3b8493a9687885776/embed?camera=0&transparent=1&ui_hint=0&scrollwheel=0"></iframe>
 					</div>
-					<a href="#" class="button button--light">
-						VIEW MODEL IN FULL SCREEN 
-						<svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__arrow">
-							<path id="button__arrow--light" d="M85.1768 0.823223L85 0.646447L84.8232 0.823223L83.4132 2.23322L83.2366 2.40984L83.4131 2.58662L88.5672 7.75H1H0.75V8V10V10.25H1H88.5672L83.4131 15.4134L83.2366 15.5902L83.4132 15.7668L84.8232 17.1768L85 17.3536L85.1768 17.1768L93.1768 9.17678L93.3536 9L93.1768 8.82322L85.1768 0.823223Z" fill="#D9D9D9" stroke="#D9D9D9" stroke-width="0.5"/>
-						</svg>	
-					</a>
+					<div class="object__right">
+						<h1 class="object__heading">The Legends of Coco De Mer</h1>
+						<p class="object__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+						<div class="object__details">
+							<span class="object__label">SIZE</span>
+							<p class="object__detail">232cm</p>
+							<span class="object__label">WEIGHT</span>
+							<p class="object__detail">22kg</p>
+							<span class="object__label">ORIGIN</span>
+							<p class="object__detail">Seychelles Islands</p>
+						</div>
+						<a href="objects/coco-de-mer.html" class="button button--light">
+							VIEW MODEL IN FULL SCREEN 
+							<svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__arrow">
+								<path id="button__arrow--light" d="M85.1768 0.823223L85 0.646447L84.8232 0.823223L83.4132 2.23322L83.2366 2.40984L83.4131 2.58662L88.5672 7.75H1H0.75V8V10V10.25H1H88.5672L83.4131 15.4134L83.2366 15.5902L83.4132 15.7668L84.8232 17.1768L85 17.3536L85.1768 17.1768L93.1768 9.17678L93.3536 9L93.1768 8.82322L85.1768 0.823223Z" fill="#D9D9D9" stroke="#D9D9D9" stroke-width="0.5"/>
+							</svg>	
+						</a>
+					</div>
+				</div>
+				<div class="backdrop">
+					<img src="assets/img/svg/Background-Asset-001.svg" alt="" class="backdrop__asset backdrop__asset--001">
+					<img src="assets/img/svg/Background-Asset-002.svg" alt="" class="backdrop__asset backdrop__asset--002">
 				</div>
 			</section>
-			<section class="chapter chapter--right">
-				<p class="chapter__text chapter__text--right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+			<section class="chapter">
+				<div class="chapter__container chapter__container--right">
+					<p class="chapter__text chapter__text--right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+				</div>
+				<div class="backdrop">
+					<img src="assets/img/svg/Background-Asset-003.svg" alt="" class="backdrop__asset backdrop__asset--003">
+					<img src="assets/img/svg/Background-Asset-004.svg" alt="" class="backdrop__asset backdrop__asset--004">
+				</div>
 			</section>
 			<section class="object">
-				<div class="sketchfab-embed-wrapper object__sketchfab">
-					<iframe title="Medium Poly" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0a750755a1948e0abd87328e684ad0e/embed?camera=0&transparent=1&ui_hint=0"></iframe>
-				</div>
-				<div class="object__right">
-					<h1 class="object__heading">Brain coral and the Great Barrier Reef</h1>
-					<p class="object__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
-					<div class="object__details">
-						<span class="object__label">SIZE</span>
-						<p class="object__detail">232cm</p>
-						<span class="object__label">WEIGHT</span>
-						<p class="object__detail">22kg</p>
-						<span class="object__label">ORIGIN</span>
-						<p class="object__detail">Great Barrier Reef</p>
+				<div class="object__container">
+					<div class="sketchfab-embed-wrapper object__sketchfab">
+						<iframe title="Medium Poly" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0a750755a1948e0abd87328e684ad0e/embed?camera=0&transparent=1&ui_hint=0&scrollwheel=0"></iframe>
 					</div>
-					<a href="#" class="button button--light">
-						VIEW MODEL IN FULL SCREEN 
-						<svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__arrow">
-							<path id="button__arrow--light" d="M85.1768 0.823223L85 0.646447L84.8232 0.823223L83.4132 2.23322L83.2366 2.40984L83.4131 2.58662L88.5672 7.75H1H0.75V8V10V10.25H1H88.5672L83.4131 15.4134L83.2366 15.5902L83.4132 15.7668L84.8232 17.1768L85 17.3536L85.1768 17.1768L93.1768 9.17678L93.3536 9L93.1768 8.82322L85.1768 0.823223Z" fill="#D9D9D9" stroke="#D9D9D9" stroke-width="0.5"/>
-						</svg>	
-					</a>
+					<div class="object__right">
+						<h1 class="object__heading">Brain coral and the Great Barrier Reef</h1>
+						<p class="object__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+						<div class="object__details">
+							<span class="object__label">SIZE</span>
+							<p class="object__detail">232cm</p>
+							<span class="object__label">WEIGHT</span>
+							<p class="object__detail">22kg</p>
+							<span class="object__label">ORIGIN</span>
+							<p class="object__detail">Great Barrier Reef</p>
+						</div>
+						<a href="objects/brain-coral.html" class="button button--light">
+							VIEW MODEL IN FULL SCREEN 
+							<svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__arrow">
+								<path id="button__arrow--light" d="M85.1768 0.823223L85 0.646447L84.8232 0.823223L83.4132 2.23322L83.2366 2.40984L83.4131 2.58662L88.5672 7.75H1H0.75V8V10V10.25H1H88.5672L83.4131 15.4134L83.2366 15.5902L83.4132 15.7668L84.8232 17.1768L85 17.3536L85.1768 17.1768L93.1768 9.17678L93.3536 9L93.1768 8.82322L85.1768 0.823223Z" fill="#D9D9D9" stroke="#D9D9D9" stroke-width="0.5"/>
+							</svg>	
+						</a>
+					</div>
 				</div>
 			</section>
-			<section class="chapter chapter--left">
-				<p class="chapter__text chapter__text--left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+			<section class="chapter">
+				<div class="chapter__container chapter__container--left">
+					<p class="chapter__text chapter__text--left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+				</div>
 			</section>
 			<section class="object">
-				<div class="sketchfab-embed-wrapper object__sketchfab">
-					<iframe title="Medium Poly" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8f38a11b901942b3b8493a9687885776/embed?camera=0&transparent=1&ui_hint=0"></iframe>
-				</div>
-				<div class="object__right">
-					<h1 class="object__heading">Ludwigella Concava the Ammonite Fossil</h1>
-					<p class="object__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
-					<div class="object__details">
-						<span class="object__label">SIZE</span>
-						<p class="object__detail">232cm</p>
-						<span class="object__label">WEIGHT</span>
-						<p class="object__detail">22kg</p>
-						<span class="object__label">ORIGIN</span>
-						<p class="object__detail">Burton Cliff</p>
+				<div class="object__container">
+					<div class="sketchfab-embed-wrapper object__sketchfab">
+						<iframe title="Medium Poly" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8f38a11b901942b3b8493a9687885776/embed?camera=0&transparent=1&ui_hint=0&scrollwheel=0"></iframe>
 					</div>
-					<a href="#" class="button button--light">
-						VIEW MODEL IN FULL SCREEN 
-						<svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__arrow">
-							<path id="button__arrow--light" d="M85.1768 0.823223L85 0.646447L84.8232 0.823223L83.4132 2.23322L83.2366 2.40984L83.4131 2.58662L88.5672 7.75H1H0.75V8V10V10.25H1H88.5672L83.4131 15.4134L83.2366 15.5902L83.4132 15.7668L84.8232 17.1768L85 17.3536L85.1768 17.1768L93.1768 9.17678L93.3536 9L93.1768 8.82322L85.1768 0.823223Z" fill="#D9D9D9" stroke="#D9D9D9" stroke-width="0.5"/>
-						</svg>	
-					</a>
+					<div class="object__right">
+						<h1 class="object__heading">Ludwigella Concava the Ammonite Fossil</h1>
+						<p class="object__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+						<div class="object__details">
+							<span class="object__label">SIZE</span>
+							<p class="object__detail">232cm</p>
+							<span class="object__label">WEIGHT</span>
+							<p class="object__detail">22kg</p>
+							<span class="object__label">ORIGIN</span>
+							<p class="object__detail">Burton Cliff</p>
+						</div>
+						<a href="objects/ludwigella-concava.html" class="button button--light">
+							VIEW MODEL IN FULL SCREEN 
+							<svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__arrow">
+								<path id="button__arrow--light" d="M85.1768 0.823223L85 0.646447L84.8232 0.823223L83.4132 2.23322L83.2366 2.40984L83.4131 2.58662L88.5672 7.75H1H0.75V8V10V10.25H1H88.5672L83.4131 15.4134L83.2366 15.5902L83.4132 15.7668L84.8232 17.1768L85 17.3536L85.1768 17.1768L93.1768 9.17678L93.3536 9L93.1768 8.82322L85.1768 0.823223Z" fill="#D9D9D9" stroke="#D9D9D9" stroke-width="0.5"/>
+							</svg>	
+						</a>
+					</div>
 				</div>
 			</section>
-			<section class="chapter chapter--right">
-				<p class="chapter__text chapter__text--right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+			<section class="chapter">
+				<div class="chapter__container chapter__container--right">
+					<p class="chapter__text chapter__text--right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+				</div>
 			</section>
 			<section class="object">
-				<div class="sketchfab-embed-wrapper object__sketchfab">
-					<iframe title="Medium Poly" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0a750755a1948e0abd87328e684ad0e/embed?camera=0&transparent=1&ui_hint=0"></iframe>
-				</div>
-				<div class="object__right">
-					<h1 class="object__heading">The Jurassic Twerton Dolphin</h1>
-					<p class="object__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
-					<div class="object__details">
-						<span class="object__label">SIZE</span>
-						<p class="object__detail">232cm</p>
-						<span class="object__label">WEIGHT</span>
-						<p class="object__detail">22kg</p>
-						<span class="object__label">ORIGIN</span>
-						<p class="object__detail">River Avon</p>
+				<div class="object__container">
+					<div class="sketchfab-embed-wrapper object__sketchfab">
+						<iframe title="Medium Poly" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0a750755a1948e0abd87328e684ad0e/embed?camera=0&transparent=1&ui_hint=0&scrollwheel=0"></iframe>
 					</div>
-					<a href="#" class="button button--light">
-						VIEW MODEL IN FULL SCREEN 
-						<svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__arrow">
-							<path id="button__arrow--light" d="M85.1768 0.823223L85 0.646447L84.8232 0.823223L83.4132 2.23322L83.2366 2.40984L83.4131 2.58662L88.5672 7.75H1H0.75V8V10V10.25H1H88.5672L83.4131 15.4134L83.2366 15.5902L83.4132 15.7668L84.8232 17.1768L85 17.3536L85.1768 17.1768L93.1768 9.17678L93.3536 9L93.1768 8.82322L85.1768 0.823223Z" fill="#D9D9D9" stroke="#D9D9D9" stroke-width="0.5"/>
-						</svg>	
-					</a>
+					<div class="object__right">
+						<h1 class="object__heading">The Jurassic Twerton Dolphin</h1>
+						<p class="object__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at orci nibh in vulputate rutrum. Elementum dui ornare amet quam cras neque diam. Id elementum ut commodo enim amet. Nunc faucibus vel consectetur dapibus in elementum adipiscing.</p>
+						<div class="object__details">
+							<span class="object__label">SIZE</span>
+							<p class="object__detail">232cm</p>
+							<span class="object__label">WEIGHT</span>
+							<p class="object__detail">22kg</p>
+							<span class="object__label">ORIGIN</span>
+							<p class="object__detail">River Avon</p>
+						</div>
+						<a href="objects/twerton-dolphin-skull.html" class="button button--light">
+							VIEW MODEL IN FULL SCREEN 
+							<svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__arrow">
+								<path id="button__arrow--light" d="M85.1768 0.823223L85 0.646447L84.8232 0.823223L83.4132 2.23322L83.2366 2.40984L83.4131 2.58662L88.5672 7.75H1H0.75V8V10V10.25H1H88.5672L83.4131 15.4134L83.2366 15.5902L83.4132 15.7668L84.8232 17.1768L85 17.3536L85.1768 17.1768L93.1768 9.17678L93.3536 9L93.1768 8.82322L85.1768 0.823223Z" fill="#D9D9D9" stroke="#D9D9D9" stroke-width="0.5"/>
+							</svg>	
+						</a>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -168,5 +186,7 @@
 			</section>
 			<section class="footer__map"></section>
 		</footer>
+
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
