@@ -58,9 +58,9 @@ nav a {
   width: 100%;
   height: 400px;
   background-image: url("../img/svg/waves-front.svg");
-  background-size: contain;
-  background-position: top;
-  background-repeat: repeat;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 .socials {
@@ -172,9 +172,9 @@ nav a {
 
 .trails__desktop {
   position: absolute;
-  z-index: 1;
-  top: 250px;
-  left: 0px;
+  z-index: -1;
+  top: calc(100vh + 150px);
+  left: 350px;
   height: 14000px;
 }
 
@@ -282,6 +282,17 @@ nav a {
 }
 
 .footer {
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
   background-color: #14232C;
 }
 
@@ -293,6 +304,7 @@ nav a {
 .footer__transition::before {
   content: '';
   position: absolute;
+  z-index: -2;
   top: -160px;
   left: 0px;
   height: 160px;
@@ -382,6 +394,17 @@ nav a {
 }
 
 .footer__map {
+  position: relative;
+}
+
+.footer__map::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
   background-color: #172630;
 }
 /*# sourceMappingURL=main.css.map */
