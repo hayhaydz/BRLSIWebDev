@@ -37,6 +37,64 @@ nav a {
   margin: auto;
 }
 
+.pre-loader {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  background-color: #EFEFEF;
+  width: 100%;
+  height: 100%;
+}
+
+.pre-loader__waves {
+  content: '';
+  position: absolute;
+  z-index: 101;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: calc(100% + 200px);
+  background-image: url("../img/svg/waves-fullscreen.svg");
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.pre-loader__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.pre-loader__emoji {
+  font-size: 14em;
+}
+
+.pre-loader__progress {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 15px;
+  color: #C0C0C0;
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
 .landing::before {
   content: '';
   position: absolute;
@@ -166,17 +224,17 @@ nav a {
   stroke: #D9D9D9;
 }
 
-.trails {
+.trails::before {
+  content: '';
   position: absolute;
-  overflow: hidden;
-  width: 100%;
-  height: 16000px;
-}
-
-.trails__desktop {
-  position: absolute;
+  z-index: -1;
   top: calc(100vh + 350px);
-  left: 150px;
+  width: 100%;
+  height: 1050vh;
+  background-image: url("../img/svg/trail-desktop.svg");
+  background-size: contain;
+  background-position: top left;
+  background-repeat: no-repeat;
 }
 
 .backdrop__asset {

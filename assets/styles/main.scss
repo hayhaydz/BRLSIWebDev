@@ -37,6 +37,56 @@ nav a {
     margin: auto;
 }
 
+// Pre Loader 
+.pre-loader {
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+
+    background-color: #EFEFEF;
+    width: 100%;
+    height: 100%;
+
+    &__waves {
+        content: '';
+        position: absolute;
+        z-index: 101;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: calc(100% + 200px);
+        background-image: url('../img/svg/waves-fullscreen.svg');
+        background-size: cover;
+        background-position: top left;
+        background-repeat: no-repeat;
+        transform: translateY(100%);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &__emoji {
+        font-size: 14em;
+    }
+
+    &__progress {
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 15px;
+        color: #C0C0C0;
+    }
+}
+
+.noScroll {
+    overflow: hidden;
+}
+
 // Landing
 .landing {
     &::before {
@@ -165,15 +215,19 @@ nav a {
 
 // Trails
 .trails {
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 16000px;
 
-    &__desktop {
+    &::before {
+        content: '';
         position: absolute;
+        z-index: -1;
         top: calc(100vh + 350px);
-        left: 150px;
+        // left: 150px;
+        width: 100%;
+        height: 1050vh;
+        background-image: url("../img/svg/trail-desktop.svg");
+        background-size: contain;
+        background-position: top left;
+        background-repeat: no-repeat;
     }
 }
 
