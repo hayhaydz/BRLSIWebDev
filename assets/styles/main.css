@@ -4,6 +4,7 @@
 }
 
 body {
+  position: relative;
   font-family: 'Raleway', sans-serif;
   background-color: #052739;
 }
@@ -94,6 +95,10 @@ nav a {
 
 .noScroll {
   overflow: hidden;
+}
+
+.landing {
+  position: relative;
 }
 
 .landing::before {
@@ -225,17 +230,18 @@ nav a {
   stroke: #D9D9D9;
 }
 
-.trails::before {
-  content: '';
+.trail {
   position: absolute;
   z-index: -1;
   top: calc(100vh + 350px);
-  width: 100%;
-  height: 1050vh;
+  left: 0px;
+  right: 0px;
+  bottom: 50vh;
   background-image: url("../img/svg/trail-desktop.svg");
-  background-size: contain;
-  background-position: top left;
+  background-size: cover;
+  background-position: bottom center;
   background-repeat: no-repeat;
+  opacity: 0.4;
 }
 
 .backdrop__asset {
@@ -494,6 +500,7 @@ nav a {
 
 .footer__right {
   width: 50%;
+  margin-left: 40px;
 }
 
 .footer__org:first-of-type {
@@ -513,7 +520,6 @@ nav a {
   color: #E9E9E9;
   line-height: 1.8em;
   text-align: justify;
-  width: 90%;
 }
 
 .footer__map {
@@ -529,5 +535,80 @@ nav a {
   width: 100%;
   height: 100%;
   background-color: #172630;
+}
+
+@media (max-width: 1360px) {
+  section {
+    padding: 0px 20px;
+  }
+  .object__right {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .footer__content {
+    height: auto;
+    padding: 25vh 50px;
+  }
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer__right {
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .object {
+    height: auto;
+    padding: 25vh 50px;
+  }
+  .object__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 580px;
+  }
+  .object__sketchfab {
+    height: 50vh;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .object__right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer__heading {
+    max-width: 80%;
+  }
+  .footer__left {
+    width: 100%;
+  }
+  .footer__right {
+    width: 75%;
+  }
+}
+
+@media (max-width: 720px) {
+  .footer__heading {
+    max-width: 100%;
+  }
+  .footer__right {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
