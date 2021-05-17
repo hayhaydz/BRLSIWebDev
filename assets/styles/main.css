@@ -247,7 +247,7 @@ nav a {
 .backdrop__asset {
   position: absolute;
   width: 25vw;
-  min-width: 100px;
+  min-width: 200px;
 }
 
 .backdrop__asset--001 {
@@ -565,7 +565,7 @@ nav a {
   }
   .footer__right {
     margin-left: 0px;
-    margin-top: 40px;
+    margin-top: 120px;
   }
 }
 
@@ -592,6 +592,15 @@ nav a {
 }
 
 @media (max-width: 900px) {
+  .landing::after {
+    height: 240px;
+  }
+  .backdrop__asset--001 {
+    top: -300px;
+  }
+  .backdrop__asset--002 {
+    top: -400px;
+  }
   .footer__heading {
     max-width: 80%;
   }
@@ -607,8 +616,109 @@ nav a {
   .footer__heading {
     max-width: 100%;
   }
+  .footer__left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer__org:first-of-type {
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
   .footer__right {
     width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .landing::after {
+    height: 180px;
+  }
+  .button {
+    font-size: 18px;
+    padding: 1.2em 0.4em;
+  }
+  .button svg {
+    width: 60px;
+  }
+  .chapter__text {
+    font-size: 18px;
+  }
+  .backdrop__asset--001 {
+    top: -120px;
+  }
+  .backdrop__asset--002 {
+    top: -280px;
+  }
+  .object {
+    padding: 50vh 20px;
+  }
+  .object__sketchfab {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-bottom: 120px;
+    padding-top: 100%;
+  }
+  .object__sketchfab iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+  .object__heading {
+    font-size: 44px;
+  }
+  .object__label {
+    margin-right: 0px;
+  }
+  .object__detail {
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .footer__heading {
+    font-size: 28px;
+  }
+  .footer__text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  section {
+    padding: 50vh 20px !important;
+  }
+  .landing {
+    padding: 0px 20px !important;
+  }
+  .button {
+    font-size: 12px;
+    border-width: 2px;
+    padding: 1.2em 0.6em;
+  }
+  .backdrop__asset--001 {
+    top: -90px;
+  }
+  .backdrop__asset--002 {
+    top: -260px;
+  }
+  .object__heading {
+    font-size: 38px;
+  }
+  .footer__transition {
+    padding: 0px 20px !important;
+  }
+  .footer__map {
+    padding: 0px 20px !important;
   }
 }
 /*# sourceMappingURL=main.css.map */
