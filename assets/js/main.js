@@ -64,12 +64,8 @@ const animation = () => {
         ease: Linear.easeNone
     })
 
-    let masterTL = new TimelineMax({repeat: -1});
-    masterTL.to(clouds, 320, {
-        backgroundPosition: "-6352px 0px",
-        ease: Linear.easeNone
-    })
-    .to(waveBackground, 100, {
+    let wavesTL = new TimelineMax({repeat: -1});
+    wavesTL.to(waveBackground, 100, {
         backgroundPosition: "-6352px 0px",
         ease: Linear.easeNone
     }, 0)
@@ -81,6 +77,16 @@ const animation = () => {
         backgroundPosition: "-6352px 0px",
         ease: Linear.easeNone
     }, 0)
+
+    let cloudsTL = new TimelineMax({repeat: -1});
+    cloudsTL.to(clouds, 320, {
+        backgroundPosition: "-6352px 0px",
+        ease: Linear.easeNone
+    });
+
+    let masterTL = new TimelineMax();
+    masterTL.add(cloudsTL, 0)
+    .add(wavesTL, 0)
     .add(birdsTL, 0);
 }
 
