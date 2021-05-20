@@ -101,6 +101,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    // overflow: hidden;
 
     &::before {
         content: '';
@@ -117,7 +118,7 @@ section {
         position: relative;
         z-index: 6;
         max-width: 1440px;
-        margin-top: 0px;
+        margin-top: -100px;
     }
 
     &__heading {
@@ -137,60 +138,63 @@ section {
         line-height: 1.6em;
     }
 
-    &__backdrop__clouds {
-        position: absolute;
-        z-index: 1;
-        top: 40px;
-        left: 0px;
-        width: 100%;
-        height: 400px;
-        background-image: url('../img/svg/clouds.svg');
-        background-size: cover;
-        background-position: -70px 0px;
-        background-repeat: repeat;
-    }
+    &__backdrop {
 
-    &__backdrop__wave {
-        position: absolute;
-        left: 0px;
-        width: 100%;
-        height: 400px;
-        background-image: url('../img/svg/wave.svg');
-        background-size: cover;
-        background-repeat: repeat;
-    }
+        &__clouds {
+            position: absolute;
+            z-index: 1;
+            top: 40px;
+            left: 0px;
+            width: 100%;
+            height: 400px;
+            background-image: url('../img/svg/clouds.svg');
+            background-size: cover;
+            background-position: -70px 0px;
+            background-repeat: repeat;
+        }
 
-    &__backdrop__island{
-        position: absolute;
-        z-index: 4;
-        bottom: 190px;
-        right: 50px;
-    }
+        &__wave {
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            height: 400px;
+            background-image: url('../img/svg/wave.svg');
+            background-size: cover;
+            background-repeat: repeat;
+        }
 
-    &__backdrop__birds{
-        position: absolute;
-        z-index: 5;
-        bottom: 740px;
-        right: 100px;
-        transform: translateY(0px);
-    }
+        &__island{
+            position: absolute;
+            z-index: 4;
+            bottom: 130px;
+            right: 50px;
+        }
 
-    &__backdrop__wave--001 {
-        z-index: 3; 
-        bottom: -20px;
-        background-position: 60px 0px;
-    }
+        &__birds{
+            position: absolute;
+            z-index: 5;
+            bottom: 640px;
+            right: 100px;
+            transform: translateY(0px);
+        }
 
-    &__backdrop__wave--002 {
-        z-index: 4;
-        bottom: -50px;
-        background-position: 120px 0px;
-    }
+        &__wave--001 {
+            z-index: 3; 
+            bottom: -90px;
+            background-position: 60px 0px;
+        }
 
-    &__backdrop__wave--003 {
-        z-index: 5;
-        bottom: -90px;
-        background-position: 49px 0px;
+        &__wave--002 {
+            z-index: 4;
+            bottom: -120px;
+            background-position: 120px 0px;
+        }
+
+        &__wave--003 {
+            z-index: 5;
+            bottom: -160px;
+            background-position: 49px 0px;
+        }
     }
 }
 
@@ -595,7 +599,38 @@ section {
 }
 
 // Media Queries
+@media(max-width: 1440px) {
+    .header {
+        max-width: 100%;
+
+        &__logos {
+            padding-left: 100px;
+        }
+    }
+
+    .socials {
+        &--header {
+            padding-right: 100px;
+        }
+    }
+}
+
 @media(max-width: 1360px) {
+    .header {
+        max-width: 100%;
+        padding-top: 20px;
+
+        &__logos {
+            padding-left: 20px;
+        }
+    }
+
+    .socials {
+        &--header {
+            padding-right: 20px;
+        }
+    }
+
     section {
         padding: 0px 20px;
     }
@@ -628,8 +663,59 @@ section {
     }
 }
 
+@media(max-width: 1150px) {
+    .landing {
+        &__heading {
+            font-size: 64px;
+        }
+
+        &__backdrop__island {
+            right: 0px;
+        }
+    }
+}
+
 // Tablet
 @media(max-width: 1023px) {
+    .landing {
+        align-items: flex-start;
+
+        &__container {
+            margin-top: 0px;
+            padding-top: 160px;
+        }
+
+        &__heading {
+            font-size: 48px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+
+        &__backdrop__birds {
+            bottom: 480px;
+            right: 30px;
+        }
+
+        &__backdrop__island {
+            bottom: 80px;
+            width: 500px;
+        }
+
+        &__backdrop__wave--001 {
+            bottom: -180px;
+        }
+
+        &__backdrop__wave--002 {
+            bottom: -210px;
+        }
+
+        &__backdrop__wave--003 {
+            bottom: -240px;
+        }
+    }
+
     .object {
         height: auto;
         padding: 25vh 50px;
@@ -686,6 +772,50 @@ section {
     }
 }
 
+@media(max-width: 840px) {
+    .header {
+        &__logos {
+            height: 35px;
+        }
+    }
+
+    .socials--header {
+        & .socials__link {
+            width: 30px;
+            height: 30px;
+
+            & i, svg {
+                width: 16px;
+            }
+
+            & svg {
+                height: 16px;
+            }
+        }
+    }
+
+    .landing {
+
+        &__container {
+            padding-top: 140px;
+        }
+
+        &__heading {
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    .button--dark {
+        width: 90%;
+    }
+}
+
 @media(max-width: 720px) {
     .footer {
 
@@ -721,10 +851,34 @@ section {
             font-size: 8em;
         }
     }
+    
+    .socials--header {
+        & .socials__link {
+            margin-right: 10px;
+
+            &:last-of-type {
+                margin-right: 0px;
+            }
+        }
+    }
 
     .landing {
         &::after {
             height: 180px;
+        }
+
+        &__container {
+            padding-top: 100px;
+        }
+
+        &__backdrop {
+            &__birds {
+                bottom: 410px;
+            }
+
+            &__island {
+                width: 400px;
+            }
         }
     }
 
@@ -802,6 +956,17 @@ section {
 }
 
 @media(max-width: 360px) {
+    .header {
+        &__logos {
+            height: 30px;
+            padding-left: 10px;
+        }
+    }
+
+    .socials--header {
+        padding-right: 10px;
+    }
+
     section {
         padding: 50vh 20px !important;
     }

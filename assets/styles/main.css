@@ -134,7 +134,7 @@ section {
   position: relative;
   z-index: 6;
   max-width: 1440px;
-  margin-top: 0px;
+  margin-top: -100px;
 }
 
 .landing__heading {
@@ -180,14 +180,14 @@ section {
 .landing__backdrop__island {
   position: absolute;
   z-index: 4;
-  bottom: 190px;
+  bottom: 130px;
   right: 50px;
 }
 
 .landing__backdrop__birds {
   position: absolute;
   z-index: 5;
-  bottom: 740px;
+  bottom: 640px;
   right: 100px;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -195,19 +195,19 @@ section {
 
 .landing__backdrop__wave--001 {
   z-index: 3;
-  bottom: -20px;
+  bottom: -90px;
   background-position: 60px 0px;
 }
 
 .landing__backdrop__wave--002 {
   z-index: 4;
-  bottom: -50px;
+  bottom: -120px;
   background-position: 120px 0px;
 }
 
 .landing__backdrop__wave--003 {
   z-index: 5;
-  bottom: -90px;
+  bottom: -160px;
   background-position: 49px 0px;
 }
 
@@ -657,7 +657,29 @@ section {
   background-color: #172630;
 }
 
+@media (max-width: 1440px) {
+  .header {
+    max-width: 100%;
+  }
+  .header__logos {
+    padding-left: 100px;
+  }
+  .socials--header {
+    padding-right: 100px;
+  }
+}
+
 @media (max-width: 1360px) {
+  .header {
+    max-width: 100%;
+    padding-top: 20px;
+  }
+  .header__logos {
+    padding-left: 20px;
+  }
+  .socials--header {
+    padding-right: 20px;
+  }
   section {
     padding: 0px 20px;
   }
@@ -689,7 +711,48 @@ section {
   }
 }
 
+@media (max-width: 1150px) {
+  .landing__heading {
+    font-size: 64px;
+  }
+  .landing__backdrop__island {
+    right: 0px;
+  }
+}
+
 @media (max-width: 1023px) {
+  .landing {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .landing__container {
+    margin-top: 0px;
+    padding-top: 160px;
+  }
+  .landing__heading {
+    font-size: 48px;
+  }
+  .landing__text {
+    font-size: 18px;
+  }
+  .landing__backdrop__birds {
+    bottom: 480px;
+    right: 30px;
+  }
+  .landing__backdrop__island {
+    bottom: 80px;
+    width: 500px;
+  }
+  .landing__backdrop__wave--001 {
+    bottom: -180px;
+  }
+  .landing__backdrop__wave--002 {
+    bottom: -210px;
+  }
+  .landing__backdrop__wave--003 {
+    bottom: -240px;
+  }
   .object {
     height: auto;
     padding: 25vh 50px;
@@ -732,6 +795,36 @@ section {
   }
 }
 
+@media (max-width: 840px) {
+  .header__logos {
+    height: 35px;
+  }
+  .socials--header .socials__link {
+    width: 30px;
+    height: 30px;
+  }
+  .socials--header .socials__link i, .socials--header .socials__link svg {
+    width: 16px;
+  }
+  .socials--header .socials__link svg {
+    height: 16px;
+  }
+  .landing__container {
+    padding-top: 140px;
+  }
+  .landing__heading {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .landing__text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .button--dark {
+    width: 90%;
+  }
+}
+
 @media (max-width: 720px) {
   .footer__heading {
     max-width: 100%;
@@ -761,8 +854,23 @@ section {
   .pre-loader__emoji {
     font-size: 8em;
   }
+  .socials--header .socials__link {
+    margin-right: 10px;
+  }
+  .socials--header .socials__link:last-of-type {
+    margin-right: 0px;
+  }
   .landing::after {
     height: 180px;
+  }
+  .landing__container {
+    padding-top: 100px;
+  }
+  .landing__backdrop__birds {
+    bottom: 410px;
+  }
+  .landing__backdrop__island {
+    width: 400px;
   }
   .button {
     font-size: 18px;
@@ -817,6 +925,13 @@ section {
 }
 
 @media (max-width: 360px) {
+  .header__logos {
+    height: 30px;
+    padding-left: 10px;
+  }
+  .socials--header {
+    padding-right: 10px;
+  }
   section {
     padding: 50vh 20px !important;
   }
