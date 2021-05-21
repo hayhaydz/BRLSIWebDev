@@ -42,10 +42,11 @@ if(!hasLoaded) {
 } else {
     document.getElementById("header").classList.remove("notVisible");
     document.getElementById("landing-container").classList.remove("notVisible");
+    document.getElementById("landing-sound").classList.remove("notVisible");
     document.getElementById("pre-loader").style.display = 'none';
     document.body.classList.remove("noScroll");
 }
-loadingLoop();
+// loadingLoop();
 
 const animation = () => {
     let clouds = document.getElementById("backdrop-clouds");
@@ -90,16 +91,80 @@ const animation = () => {
     .add(birdsTL, 0);
 }
 
-
 const audio = () => {
+    let audioPlaying = false;
+    let audioBtn = document.getElementById("audio-btn");
+    let playIcon = document.getElementById("play-sound");
+    let muteIcon = document.getElementById("mute-sound");
+
+    let oceanWavesTL = new TimelineLite();
     let oceanWaves = new Audio("/assets/sound/ocean-waves-loop.wav");
-    
     oceanWaves.oncanplaythrough = () => {
         console.log('audio can play');
-        oceanWaves.play();
-        oceanWaves.volume = 0.05;
-        oceanWaves.loop = true;
+        if(!audioPlaying) {
+            // oceanWaves.play();
+            oceanWaves.volume = 0;
+            oceanWaves.loop = true;
+        }
     }
+
+    let seagullsTL = new TimelineLite();
+    let seagulls = new Audio("/assets/sound/seagulls_peaceful.wav");
+    // seagulls.play();
+    seagulls.volume = 0;
+    seagulls.loop = true;
+    const seagullLoop = () => {
+        setTimeout(() => {
+            if(audioPlaying) {
+                if((Math.floor(Math.random() * 2) + 1) % 2 == 0) {
+                    seagullsTL.to(seagulls, {volume: 0.4});
+                    seagullsTL.to(seagulls, {delay: 10, volume: 0});
+                }
+            }
+            seagullLoop();
+        }, 5000);
+    }
+    seagullLoop();
+
+    const updateAudioStatus = () => {
+        if(oceanWaves.paused) {
+            oceanWaves.play();
+            seagulls.play();
+        }
+
+        if(audioPlaying) {
+            oceanWavesTL.to(oceanWaves, {volume: 0});
+            seagullsTL.to(seagulls, {volume: 0});
+            seagulls.volume = 0;
+            audioPlaying = false;
+        } else {
+            oceanWavesTL.to(oceanWaves, {volume: 0.1});
+            audioPlaying = true;
+        }
+    }
+
+    audioBtn.addEventListener("click", () => {
+        if(audioPlaying) {
+            playIcon.style.display = "block";
+            muteIcon.style.display = "none";
+        } else {
+            muteIcon.style.display = "block";
+            playIcon.style.display = "none";
+        }
+        updateAudioStatus();
+    });
+}
+
+const scroll = () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 }
 
 window.onload = () => {
@@ -108,5 +173,6 @@ window.onload = () => {
     console.log("Page load took " + (t1 - t0) + " milliseconds.");
     loaded = true;
     animation();
-    // audio();
+    audio();
+    scroll();
 }

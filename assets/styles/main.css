@@ -154,6 +154,60 @@ section {
   line-height: 1.6em;
 }
 
+.landing__sound {
+  position: absolute;
+  z-index: 10;
+  bottom: 50px;
+  right: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing__sound__text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #F6F6F6;
+  margin-right: 20px;
+}
+
+.landing__sound__btn {
+  background-color: transparent;
+  border: 3px solid #F6F6F6;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  cursor: pointer;
+}
+
+.landing__sound__btn i {
+  color: #F6F6F6;
+  text-align: center;
+  font-size: 1.2em;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.landing__sound__btn #mute-sound {
+  display: none;
+}
+
+.landing__sound__btn:hover {
+  background-color: #F6F6F6;
+}
+
+.landing__sound__btn:hover i {
+  color: #071041;
+}
+
 .landing__backdrop__clouds {
   position: absolute;
   z-index: 1;
