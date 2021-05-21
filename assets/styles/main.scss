@@ -795,6 +795,7 @@ section {
     }
 
     .landing {
+        height: 110vh;
 
         &__container {
             padding-top: 140px;
@@ -863,12 +864,15 @@ section {
     }
 
     .landing {
+        height: 200vh;
+        max-height: 1200px;
+
         &::after {
             height: 180px;
         }
 
         &__container {
-            padding-top: 100px;
+            padding-top: 120px;
         }
 
         &__backdrop {
@@ -955,7 +959,7 @@ section {
     }
 }
 
-@media(max-width: 360px) {
+@media(max-width: 380px) {
     .header {
         &__logos {
             height: 30px;
@@ -973,12 +977,25 @@ section {
 
     .landing {
         padding: 0px 20px !important;
+        max-height: 1100px;
+
+        &__heading {
+            font-size: 32px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
     }
 
     .button {
-        font-size: 12px;
-        border-width: 2px;
+        font-size: 14px;
+        border-width: 3px;
         padding: 1.2em 0.6em;
+
+        & svg {
+            width: 40px;
+        }
     }
 
     .backdrop {

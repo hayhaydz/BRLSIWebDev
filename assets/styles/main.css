@@ -809,6 +809,9 @@ section {
   .socials--header .socials__link svg {
     height: 16px;
   }
+  .landing {
+    height: 110vh;
+  }
   .landing__container {
     padding-top: 140px;
   }
@@ -860,11 +863,15 @@ section {
   .socials--header .socials__link:last-of-type {
     margin-right: 0px;
   }
+  .landing {
+    height: 200vh;
+    max-height: 1200px;
+  }
   .landing::after {
     height: 180px;
   }
   .landing__container {
-    padding-top: 100px;
+    padding-top: 120px;
   }
   .landing__backdrop__birds {
     bottom: 410px;
@@ -924,7 +931,7 @@ section {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .header__logos {
     height: 30px;
     padding-left: 10px;
@@ -937,11 +944,21 @@ section {
   }
   .landing {
     padding: 0px 20px !important;
+    max-height: 1100px;
+  }
+  .landing__heading {
+    font-size: 32px;
+  }
+  .landing__text {
+    font-size: 16px;
   }
   .button {
-    font-size: 12px;
-    border-width: 2px;
+    font-size: 14px;
+    border-width: 3px;
     padding: 1.2em 0.6em;
+  }
+  .button svg {
+    width: 40px;
   }
   .backdrop__asset--001 {
     top: -90px;
