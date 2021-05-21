@@ -790,6 +790,9 @@ section {
   .landing__text {
     font-size: 18px;
   }
+  .landing__sound {
+    bottom: -50px;
+  }
   .landing__backdrop__birds {
     bottom: 480px;
     right: 30px;
@@ -883,6 +886,9 @@ section {
 }
 
 @media (max-width: 720px) {
+  .landing__sound {
+    right: 20px;
+  }
   .footer__heading {
     max-width: 100%;
   }
@@ -926,6 +932,19 @@ section {
   }
   .landing__container {
     padding-top: 120px;
+  }
+  .landing__sound__text {
+    text-align: right;
+    margin-right: 10px;
+  }
+  .landing__sound__btn {
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    min-height: 35px;
+  }
+  .landing__sound__btn i {
+    font-size: 0.8em;
   }
   .landing__backdrop__birds {
     bottom: 410px;

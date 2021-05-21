@@ -739,6 +739,10 @@ section {
             font-size: 18px;
         }
 
+        &__sound {
+            bottom: -50px;
+        }
+
         &__backdrop__birds {
             bottom: 480px;
             right: 30px;
@@ -864,6 +868,12 @@ section {
 }
 
 @media(max-width: 720px) {
+    .landing {
+        &__sound {
+            right: 20px;
+        }
+    }
+
     .footer {
 
         &__heading {
@@ -919,6 +929,24 @@ section {
 
         &__container {
             padding-top: 120px;
+        }
+
+        &__sound {
+            &__text {
+                text-align: right;
+                margin-right: 10px;
+            }
+
+            &__btn {
+                width: 35px;
+                min-width: 35px;
+                height: 35px;
+                min-height: 35px;
+
+                & i {
+                    font-size: 0.8em;
+                }
+            }
         }
 
         &__backdrop {
