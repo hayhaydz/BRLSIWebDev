@@ -92,6 +92,7 @@ const animation = () => {
 
 const audio = () => {
     let audioPlaying = false;
+    let isAudioSurface = true;
     let audioBtn = document.getElementById("audio-btn");
     let playIcon = document.getElementById("play-sound");
     let muteIcon = document.getElementById("mute-sound");
@@ -124,7 +125,7 @@ const audio = () => {
     }
     seagullLoop();
 
-    const updateAudioStatus = () => {
+    const updateAudioSurfaceStatus = () => {
         if(oceanWaves.paused) {
             oceanWaves.play();
             seagulls.play();
@@ -133,12 +134,16 @@ const audio = () => {
         if(audioPlaying) {
             oceanWavesTL.to(oceanWaves, {volume: 0});
             seagullsTL.to(seagulls, {volume: 0});
-            seagulls.volume = 0;
+            seagulls.pause();
             audioPlaying = false;
         } else {
             oceanWavesTL.to(oceanWaves, {volume: 0.1});
             audioPlaying = true;
         }
+    }
+
+    const updateAudioBelowStatus = () => {
+
     }
 
     audioBtn.addEventListener("click", () => {
@@ -149,7 +154,37 @@ const audio = () => {
             muteIcon.style.display = "block";
             playIcon.style.display = "none";
         }
-        updateAudioStatus();
+        if(isAudioSurface) {
+            updateAudioSurfaceStatus();
+        } else {
+            updateAudioBelowStatus();
+        }
+    });
+
+    let theTimer;
+    let scrollPosition;
+    let landing = document.getElementById("landing");
+    let audioChanged = false;
+ 
+    window.addEventListener('scroll', () => {
+        clearTimeout(theTimer);
+        theTimer = setTimeout(() => {
+            scrollPosition = window.pageYOffset | document.body.scrollTop;
+            console.log(scrollPosition);
+            if(scrollPosition > landing.offsetHeight / 2) {
+                if(!audioChanged) {
+                    console.log('playing below surface audio');
+                    isAudioSurface = false;
+                    audioChanged = true;
+                }
+            } else {
+                if(audioChanged) {
+                    console.log('playing above surface audio');
+                    isAudioSurface = true;
+                    audioChanged = false;
+                }
+            }
+        }, 75);
     });
 }
 

@@ -411,6 +411,36 @@ section {
             left: 0px;
             width: 100%;
         }
+
+        &--005 {
+            top: -150px;
+            left: 0px;
+            width: 15vw;
+        }
+
+        &--006 {
+            bottom: 50px;
+            right: 0px;
+            width: 20vw;
+        }
+
+        &--007 {
+            bottom: -150px;
+            left: 0px;
+            width: 15vw;
+        }
+
+        &--008 {
+            top: 0px;
+            left: 250px;
+            width: 15vw;
+        }
+
+        &--009 {
+            bottom: 0px;
+            left: 350px;
+            width: 20vw;
+        }
     }
 }
 
@@ -638,7 +668,10 @@ section {
             left: 0px;
             width: 100%;
             height: 100%;
-            background-color: #172630;
+            background-image: url("../img/map.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         
     }
@@ -865,12 +898,33 @@ section {
     .button--dark {
         width: 90%;
     }
+
+    .backdrop {
+        &__asset {
+            &--006 {
+                bottom: -150px;
+            }
+        }
+    }
 }
 
 @media(max-width: 720px) {
     .landing {
         &__sound {
             right: 20px;
+        }
+    }
+
+    .backdrop {
+
+        &__asset {
+            &--008 {
+                left: 10px;
+            }
+    
+            &--009 {
+                left: 25px;
+            }
         }
     }
 
@@ -984,6 +1038,18 @@ section {
             &--002 {
                 top: -280px;
             }
+
+            &--005 {
+                top: -250px;
+            }
+
+            &--006 {
+                bottom: -250px;
+            }
+
+            &--007 {
+                bottom: -350px;
+            }
         }
     }
 
@@ -1080,6 +1146,14 @@ section {
 
             &--002 {
                 top: -260px;
+            }
+
+            &--006 {
+                bottom: -250px;
+            }
+
+            &--007 {
+                bottom: -50px;
             }
         }
     }
