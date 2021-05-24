@@ -98,7 +98,7 @@ const audio = () => {
     let muteIcon = document.getElementById("mute-sound");
 
     let oceanWavesTL = new TimelineLite();
-    let oceanWaves = new Audio("/BrsliWebDev/assets/sound/ocean-waves-loop.wav");
+    let oceanWaves = new Audio("/assets/sound/ocean-waves-loop.wav");
     oceanWaves.oncanplaythrough = () => {
         console.log('audio can play');
         if(!audioPlaying) {
@@ -109,7 +109,7 @@ const audio = () => {
     }
 
     let seagullsTL = new TimelineLite();
-    let seagulls = new Audio("/BrsliWebDev/assets/sound/seagulls_peaceful.wav");
+    let seagulls = new Audio("/assets/sound/seagulls_peaceful.wav");
     // seagulls.play();
     seagulls.volume = 0;
     seagulls.loop = true;
