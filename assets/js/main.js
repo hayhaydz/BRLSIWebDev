@@ -1,4 +1,3 @@
-let t0 = performance.now();
 let loaded = false;
 let i = 0;
 let hasLoaded = sessionStorage.getItem('hasLoadedKey');
@@ -100,7 +99,6 @@ const audio = () => {
     let oceanWavesTL = new TimelineLite();
     let oceanWaves = new Audio("/assets/sound/ocean-waves-loop.wav");
     oceanWaves.oncanplaythrough = () => {
-        console.log('audio can play');
         if(!audioPlaying) {
             // oceanWaves.play();
             oceanWaves.volume = 0;
@@ -168,9 +166,6 @@ const scroll = () => {
 }
 
 window.onload = () => {
-    let t1 = performance.now();
-    console.log('Page has loaded');
-    console.log("Page load took " + (t1 - t0) + " milliseconds.");
     loaded = true;
     animation();
     audio();
