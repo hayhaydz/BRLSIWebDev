@@ -420,6 +420,7 @@ section {
 
 .backdrop__asset {
   position: absolute;
+  z-index: -1;
   width: 25vw;
   min-width: 200px;
 }
