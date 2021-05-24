@@ -92,7 +92,6 @@ const animation = () => {
 
 const audio = () => {
     let audioPlaying = false;
-    let isAudioSurface = true;
     let audioBtn = document.getElementById("audio-btn");
     let playIcon = document.getElementById("play-sound");
     let muteIcon = document.getElementById("mute-sound");
@@ -142,10 +141,6 @@ const audio = () => {
         }
     }
 
-    const updateAudioBelowStatus = () => {
-
-    }
-
     audioBtn.addEventListener("click", () => {
         if(audioPlaying) {
             playIcon.style.display = "block";
@@ -154,37 +149,7 @@ const audio = () => {
             muteIcon.style.display = "block";
             playIcon.style.display = "none";
         }
-        if(isAudioSurface) {
-            updateAudioSurfaceStatus();
-        } else {
-            updateAudioBelowStatus();
-        }
-    });
-
-    let theTimer;
-    let scrollPosition;
-    let landing = document.getElementById("landing");
-    let audioChanged = false;
- 
-    window.addEventListener('scroll', () => {
-        clearTimeout(theTimer);
-        theTimer = setTimeout(() => {
-            scrollPosition = window.pageYOffset | document.body.scrollTop;
-            console.log(scrollPosition);
-            if(scrollPosition > landing.offsetHeight / 2) {
-                if(!audioChanged) {
-                    console.log('playing below surface audio');
-                    isAudioSurface = false;
-                    audioChanged = true;
-                }
-            } else {
-                if(audioChanged) {
-                    console.log('playing above surface audio');
-                    isAudioSurface = true;
-                    audioChanged = false;
-                }
-            }
-        }, 75);
+        updateAudioSurfaceStatus();
     });
 }
 
