@@ -725,6 +725,17 @@ section {
   color: #E9E9E9;
   line-height: 1.8em;
   text-align: justify;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.footer__text a {
+  color: #E9E9E9;
+}
+
+.footer__text a:hover {
+  color: #6e6e6e;
+  text-decoration: none;
 }
 
 .footer__map {

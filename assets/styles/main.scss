@@ -656,6 +656,16 @@ section {
         color: #E9E9E9;
         line-height: 1.8em;
         text-align: justify;
+        transition: 200ms ease;
+
+        & a {
+            color: #E9E9E9;
+
+            &:hover {
+                color: #6e6e6e;
+                text-decoration: none;
+            }
+        }
     }
 
     &__map {
