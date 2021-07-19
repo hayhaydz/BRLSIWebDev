@@ -763,6 +763,15 @@ section {
   .header__logos {
     padding-left: 100px;
   }
+  .landing__container {
+    margin-top: 0px;
+  }
+  .landing__heading {
+    font-size: 64px;
+  }
+  .landing__backdrop__island {
+    right: 0px;
+  }
   .socials--header {
     padding-right: 100px;
   }
@@ -807,15 +816,6 @@ section {
   .footer__right {
     margin-left: 0px;
     margin-top: 120px;
-  }
-}
-
-@media (max-width: 1150px) {
-  .landing__heading {
-    font-size: 64px;
-  }
-  .landing__backdrop__island {
-    right: 0px;
   }
 }
 

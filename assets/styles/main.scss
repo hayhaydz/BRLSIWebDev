@@ -698,6 +698,20 @@ section {
         }
     }
 
+    .landing {
+        &__container {
+            margin-top: 0px;
+        }
+
+        &__heading {
+            font-size: 64px;
+        }
+
+        &__backdrop__island {
+            right: 0px;
+        }
+    }
+
     .socials {
         &--header {
             padding-right: 100px;
@@ -749,18 +763,6 @@ section {
         &__right {
             margin-left: 0px;
             margin-top: 120px;
-        }
-    }
-}
-
-@media(max-width: 1150px) {
-    .landing {
-        &__heading {
-            font-size: 64px;
-        }
-
-        &__backdrop__island {
-            right: 0px;
         }
     }
 }
